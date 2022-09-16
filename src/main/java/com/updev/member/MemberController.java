@@ -42,6 +42,13 @@ public class MemberController {
 		return "signup";
 	}
 	
+	//로그인 폼으로 이동
+	@RequestMapping(value = "/login") 
+	public String login()
+	{
+		return "login";
+	}
+	
 	@RequestMapping(value = "/insert")
 	   public String insert(HttpServletRequest request)//회원가입 저장
 	   {
