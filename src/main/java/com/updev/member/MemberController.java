@@ -1,4 +1,4 @@
-package com.updev.project;
+package com.updev.member;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -16,18 +16,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+public class MemberController {
 	
 	@Autowired
 	
-	@RequestMapping(value = "/")
-	public String ko1()
-	{
-		return "main";
-	}
 	// 회원가입폼으로 이동
 	@RequestMapping(value = "/signup")
-	public String ko2()
+	public String member()
 	{
 		return "signup";
 	}
