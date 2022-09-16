@@ -30,7 +30,15 @@ public class MemberController {
 	SqlSession sqlsession;
 	
 	@RequestMapping(value = "/")
-	public String ko1()
+	public String ko1(HttpServletRequest request)
+	{
+		HttpSession ss = request.getSession();
+		ss.setAttribute("loginState", false);
+		return "main";
+	}
+	
+	@RequestMapping(value = "/index")
+	public String index()
 	{
 		return "main";
 	}
@@ -42,12 +50,12 @@ public class MemberController {
 		return "signup";
 	}
 	
-	//로그인 폼으로 이동
-	@RequestMapping(value = "/login") 
-	public String login()
-	{
-		return "login";
-	}
+	// 로그인폼으로 이동
+		@RequestMapping(value = "/login")
+		public String lo()
+		{
+			return "login";
+		}
 	
 	@RequestMapping(value = "/insert")
 	   public String insert(HttpServletRequest request)//회원가입 저장
@@ -63,7 +71,7 @@ public class MemberController {
 	      String m_grade = request.getParameter("m_grade");
 	      ServiceMember ss = sqlsession.getMapper(ServiceMember.class);
 	      ss.insert(m_profile,m_id,m_pw,m_nick,m_name,m_mail,m_tel,m_field,m_grade);
-	      return "redirect:main";
+	      return "redirect:index";
 	   }
 	   
 	   @RequestMapping(value="/loginact", method = RequestMethod.POST)
@@ -71,12 +79,10 @@ public class MemberController {
 	   {//db에 회원가입한 아이디 비밀번호가 맞는지 확인하는곳(로그인중)
 	      //정보가 맞지 않다면 로그인창으로 보냄
 	      ModelAndView mav=new ModelAndView();   
-	      String id = request.getParameter("id");
-	      String pw = request.getParameter("pw");
-	      System.out.println(id);
-	      System.out.println(pw);
+	      String m_id = request.getParameter("m_id");
+	      String m_pw = request.getParameter("m_pw");
 	      ServiceMember ss = sqlsession.getMapper(ServiceMember.class);
-	      Signup d = ss.loginselect(id, pw);
+	      Signup d = ss.loginselect(m_id, m_pw);
 	      if(d!=null) {
 	         HttpSession session = request.getSession();
 	         session.setAttribute("member", d);
@@ -87,7 +93,7 @@ public class MemberController {
 	      }
 	      else {
 	         rattr.addAttribute("check", "nodata");
-	         mav.setViewName("redirect:jo");
+	         mav.setViewName("redirect:signup");
 	      }
 	      return mav;
 	   }
