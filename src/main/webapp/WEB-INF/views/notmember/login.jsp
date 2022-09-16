@@ -19,8 +19,8 @@
 				<li><button type="button" name="" onclick="location.href = '#' ">아이디 찾기</button></li>
 				<li><button type="button" name="" onclick="location.href = '#' ">비밀번호 찾기</button></li>
 				<li><input type="checkbox" name="auto_login"> 자동 로그인</li>
-				<li><button type="button" name="login" onclick="">로그인</button></li>
-				<li><button type="button" name="sign" onclick="loginChk()">아직 회원이 아니신가요? 회원가입</button></li>
+				<li><button type="button" name="login" onclick="loginChk()">로그인</button></li>
+				<li><button type="button" name="sign" onclick="location.href = 'signup' ">아직 회원이 아니신가요? 회원가입</button></li>
 				<br>
 			</div>
 		</form>
