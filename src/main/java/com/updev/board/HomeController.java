@@ -1,9 +1,10 @@
-package com.updev.project;
+package com.updev.board;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,18 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	@Autowired
-	
-	@RequestMapping(value = "/")
-	public String ko1()
-	{
-		return "main";
-	}
-	// 회원가입폼으로 이동
-	@RequestMapping(value = "/signup")
-	public String ko2()
-	{
-		return "signup";
-	}
+	SqlSession sqlsession;
 	
 	
 }

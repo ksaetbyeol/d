@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<table>
-			<form action="??" method="post">
+			<form action="insert" method="post">
 				<table style="width: 400px">
 					<tr>
-						<td><input type="hidden" name="m_profile"></td>
+						<td><input type="hidden" name="m_profile" value="./image/fantasy.jpg"></td>
 					</tr>
 					<tr>
 						<td>아이디</td>
@@ -44,8 +44,13 @@
 					</tr>
 					<tr>
 						<td>분야</td>
-						<td><input type" name="m_field"></td>
+						<td><input type="text" name="m_field"></td>
 					</tr>
+					<tr>
+						<td>등급</td>
+						<td><input type="hidden" name="m_grade" value="회원"></td>
+					</tr>
+					
 					<tr>
 						<td>개인정보제공동의</td>
 						<td><input type="checkbox" name="agree" value="">개인 정보
