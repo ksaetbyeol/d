@@ -21,4 +21,8 @@
       <put-attribute name="body" value="/WEB-INF/views/notmember/login.jsp" />
    </definition>
    
+   <definition name="admin" extends="baseLayout">   
+      <put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
+   </definition>
+   
     </tiles-definitions>
