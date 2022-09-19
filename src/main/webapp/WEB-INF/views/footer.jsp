@@ -5,6 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	h1 {
+	clear: both;
+}
+</style>
 </head>
 <body>
 <h1>»≠¿Ã∆√!!</h1>

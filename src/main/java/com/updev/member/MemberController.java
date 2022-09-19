@@ -89,7 +89,6 @@ public class MemberController {
 	         session.setAttribute("loginState", true);
 	         session.setMaxInactiveInterval(300);
 	         mav.setViewName("redirect:index");
-	         
 	      }
 	      else {
 	         rattr.addAttribute("check", "nodata");
@@ -106,6 +105,4 @@ public class MemberController {
 	         session.setAttribute("loginState",false);
 	      return "redirect:index";
 	   }
-	
-	
 }
