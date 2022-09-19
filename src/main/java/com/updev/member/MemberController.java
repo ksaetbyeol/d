@@ -105,4 +105,11 @@ public class MemberController {
 	         session.setAttribute("loginState",false);
 	      return "redirect:index";
 	   }
+	   
+	   //회원 마이페이지로 이동
+	   @RequestMapping(value = "/myp")
+	   public String ko8()
+	   {
+		  return "mypage"; 
+	   }
 }

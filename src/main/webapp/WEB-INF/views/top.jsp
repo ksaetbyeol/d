@@ -51,10 +51,10 @@
 						<a href="admin">마이페이지</a>
 					</c:when>
 					<c:otherwise>
-						<a href=""><span>환영합니다!!${member.m_id}님</span></a>&emsp;
+						<a href=""><span>환영합니다!!${member.m_id}님</span></a>&emsp;<a href="myp">마이페이지</a>
 					</c:otherwise>
 					</c:choose>
-					<a a href="logout">로그아웃</a>
+					<a href="logout">로그아웃</a>
 				</c:when>
 				<c:otherwise>
 					<a href="signup">회원가입</a>&emsp;<a href="login">로그인</a>

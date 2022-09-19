@@ -25,4 +25,12 @@
       <put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
    </definition>
    
+   <definition name="boardwrite" extends="baseLayout">   
+      <put-attribute name="body" value="/WEB-INF/views/member/boardwrite.jsp" />
+   </definition>
+   
+   <definition name="mypage" extends="baseLayout">   
+      <put-attribute name="body" value="/WEB-INF/views/member/mypage.jsp" />
+      </definition>
+   
     </tiles-definitions>
