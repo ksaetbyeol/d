@@ -13,6 +13,7 @@ function loginChk() {
         form.pw.focus();
         return;
     }
+    
     form.action = "";
     form.submit();
     }
