@@ -1,4 +1,6 @@
-function  check(){
+function  signupChk(){
+
+	var form = document.signup1;
 	var idpw = /^[A-Za-z0-9]{4,12}$/;
 	var mailchk = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	var namechk = /^[가-힣]{2,10}$/;
@@ -90,5 +92,10 @@ function  check(){
 		if(agreechk.value==""){
 			alert("개인정보이용동의 확인해주세요.");
 			return false;
-		}  
+		} 
+		 
+		form.action = "/updev/insert";
+		form.submit();
 }
+
+

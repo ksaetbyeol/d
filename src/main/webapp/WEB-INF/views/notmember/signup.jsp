@@ -15,15 +15,15 @@
 	</div>
 	<div class="nogra">
 		<div class="wrapper">
-			<form action="" method="post">
+			<form action="insert" method="post" name="signup1">
 				<div class="title"><h1>Sign Up</h1></div>
 					<div class="myprofile">
-						<input type="hidden" name="m_profile">
+						<input type="hidden" name="m_profile" value="nmimg.png">
 					</div>
 					<div class="myid">
 						<label><input id="id" type="text" name="m_id" placeholder="아이디" autofocus></label>
 						<button class="button button1" type="button" onclick="location.href='링크주소';">중복확인</button>
-						 <div class="check_font" id="id_check"></div>
+						<div class="check_font" id="id_check"></div>
 					</div>
 					<div class="mypw">
 						<label><input id="pw" type="password" name="m_pw" placeholder="비밀번호" autofocus></label>
@@ -37,6 +37,7 @@
 					</div>
 					<div class="myname">
 						<label><input id="name" type="text" name="m_name" placeholder="이름" autofocus></label>
+						<div class="check_font" id="name_check"></div>
 					</div>
 					<div class="mymail">
 						<label><input id="mail" type="text" name="m_mail" placeholder="이메일 ex)abc123@gmail.com" autofocus></label>
@@ -55,6 +56,9 @@
 							</select>
 						</label>
 					</div>	
+					<div class="mygrade">
+						<input type="hidden" name="m_grade" value="회원">
+					</div>
 					<div class="terms">	
 					<div class="myterms" style="border: 1px solid #242038; height:70px; overflow-y: scroll;">
 						<p>
@@ -71,8 +75,8 @@
 						<label>개인 정보 수집 및 이용에 동의 합니다<input type="checkbox" id="agree1"  name="agree" autofocus></label>
 					</div>
 					<div class="signup_btn">
-					<button class="button button2" type="button" onclick="check();">회원가입</button>
-					<button class="button button2" type="button" onclick="location.href='main';">취소</button>
+					<button class="button button2" type="button" onclick="signupChk()">회원가입</button>
+					<button class="button button2" type="button" onclick="location.href = 'main' ">취소</button>
 					</div>
 			</form>
 		</div>
