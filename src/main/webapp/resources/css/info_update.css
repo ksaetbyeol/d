@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.title{
+    height: 100px;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+.title span{
+    display: block;
+    width: 100px;
+    margin-top: 39px;
+    height: 1px;
+    box-sizing: border-box;
+    border-top: 5px solid #242038;
+}
+.title p{
+	font-size: 30px;
+}
+.content{
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+}

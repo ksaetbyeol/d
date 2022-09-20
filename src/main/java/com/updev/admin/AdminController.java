@@ -12,7 +12,13 @@ public class AdminController {
 	SqlSession sqlsession;
 	
 	@RequestMapping(value = "/admin")
-	public String update(){
+	public String admin(){
 		return "admin";
+	}
+	@RequestMapping(value = "/infoupdate")
+	public String infoupdate(){
+		/*JSONArray array =
+		*/
+		return "infoupdate";
 	}
 }

@@ -21,9 +21,7 @@
       <put-attribute name="body" value="/WEB-INF/views/notmember/login.jsp" />
    </definition>
    
-   <definition name="admin" extends="baseLayout">   
-      <put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
-   </definition>
+  
    
    <definition name="boardwrite" extends="baseLayout">   
       <put-attribute name="body" value="/WEB-INF/views/member/boardwrite.jsp" />
@@ -33,12 +31,13 @@
       <put-attribute name="body" value="/WEB-INF/views/member/mypage.jsp" />
       </definition>
       
-      <definition name="boardupdate" extends="baseLayout">   
-      <put-attribute name="body" value="/WEB-INF/views/member/boardupdate.jsp" />
-      </definition>
-      
-      <definition name="infoupdate" extends="baseLayout">   
-      <put-attribute name="body" value="/WEB-INF/views/member/infoupdate.jsp" />
-      </definition>
+    <!-- admin -->
+	<definition name="admin" extends="baseLayout">   
+		<put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
+	</definition>
+	
+	<definition name="infoupdate" extends="baseLayout">   
+		<put-attribute name="body" value="/WEB-INF/views/admin/infoupdate.jsp" />
+	</definition>
    
-    </tiles-definitions>
+</tiles-definitions>
