@@ -26,7 +26,7 @@
    <definition name="boardwrite" extends="baseLayout">   
       <put-attribute name="body" value="/WEB-INF/views/member/boardwrite.jsp" />
    </definition>
-   
+  
    <definition name="mypage" extends="baseLayout">   
       <put-attribute name="body" value="/WEB-INF/views/member/mypage.jsp" />
       </definition>
@@ -39,5 +39,4 @@
 	<definition name="infoupdate" extends="baseLayout">   
 		<put-attribute name="body" value="/WEB-INF/views/admin/infoupdate.jsp" />
 	</definition>
-   
 </tiles-definitions>
