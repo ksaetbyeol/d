@@ -12,11 +12,11 @@
 			<div class="boxleft">
 			</div>
 			<div class="boxright">
-				<form name="login1" action="">
+				<form name="login1" method="POST">
 					<a href=""><img src="../resources/images/updev2.png" width="150px"></a>
 					<h1>LOGIN</h1>
-					<input class="input" type="text" name="id" value="" placeholder="아이디">
-					<input class="input" type="password" name="pw" value="" placeholder="비밀번호">
+					<input class="input" type="text" name="m_id" value="" placeholder="아이디">
+					<input class="input" type="password" name="m_pw" value="" placeholder="비밀번호">
 					 &ensp;&ensp;&ensp;
 					<input type="checkbox" name="auto_login"> 자동 로그인
 					<a href="">아이디 찾기</a><a href="">비밀번호 찾기</a>
