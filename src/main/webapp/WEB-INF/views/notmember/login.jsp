@@ -8,22 +8,24 @@
 	<script src="resources/js/login.js"></script>
 	</head>
 	<body>
-		 <!-- css 적용하기 전입니다 -->
-		<div class="block_00">
-			<span><!--logo--></span>
-		</div>
-		<form name="login1" action="loginact" method="post">
-			<div class="logincss">
-				<li><input type="text" name="m_id" value="" placeholder="아이디를 입력하세요."></li>
-				<li><input type="password" name="m_pw" value="" placeholder="비밀번호를 입력하세요."></li>
-				<!--  <li><button type="button" name="" onclick="location.href = '#' ">아이디 찾기</button></li>
-				<li><button type="button" name="" onclick="location.href = '#' ">비밀번호 찾기</button></li>
-				<li><input type="checkbox" name="auto_login"> 자동 로그인</li>
-				<li><button type="button" name="login" onclick="">로그인</button></li>
-				<li><button type="button" name="sign" onclick="loginChk()">아직 회원이 아니신가요? 회원가입</button></li>-->
-				<li><input type="submit" value="로그인"></li>
-				<br>
+		<div class="box">
+			<div class="boxleft">
 			</div>
-		</form>
+			<div class="boxright">
+				<form name="login1" method="POST">
+					<a href=""><img src="../resources/images/updev2.png" width="150px"></a>
+					<h1>LOGIN</h1>
+					<input class="input" type="text" name="m_id" value="" placeholder="아이디">
+					<input class="input" type="password" name="m_pw" value="" placeholder="비밀번호">
+					 &ensp;&ensp;&ensp;
+					<input type="checkbox" name="auto_login"> 자동 로그인
+					<a href="">아이디 찾기</a><a href="">비밀번호 찾기</a>
+						<div class="button1">
+							<button class="button" type="button" name="login" onclick="loginChk()">로그인</button>
+							<button class="button" type="button" name="sign" onclick="location.href = 'signup' ">아직 회원이 아니신가요? 회원가입</button>
+						</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>

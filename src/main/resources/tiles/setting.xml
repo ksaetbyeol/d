@@ -17,6 +17,11 @@
       <put-attribute name="body" value="/WEB-INF/views/notmember/signup.jsp" />
    </definition>
 
+   <definition name="login" extends="baseLayout">   
+      <put-attribute name="body" value="/WEB-INF/views/notmember/login.jsp" />
+   </definition>
+
+
    <definition name="boardwrite" extends="baseLayout">   
       <put-attribute name="body" value="/WEB-INF/views/member/boardwrite.jsp" />
    </definition>
