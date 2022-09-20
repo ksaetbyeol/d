@@ -5,56 +5,54 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-nav {
-	float: left;
-	width: 150px;
-	height: 1000px;
-	font-size: 18px;
-	/*
-	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-	*/
-	background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-}
-nav ul li{
-    display: block;
-    line-height: 100px;
-    text-align: center;
-}
-nav ul li .on{
-    text-decoration: underline;
-}
-nav ul li a{
-	color: #ffffff;
-	text-decoration: none;
-}
-section div{
-	display: none;
-}
-
-section .show{
-	display: block;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="./resources/css/nav.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="./resources/js/nav.js"></script>
 </head>
 <body>
 <nav>
-	<ul>
-		<li id="li"><a id="a" class="on" href="admin">마이페이지</a></li>
-		<li id="li"><a id="a" href="/">게시판 관리</a></li>
-		<li id="li"><a id="a" href="admin">신고 관리</a></li>
-		<li id="li"><a id="a" href="admin">회원 관리</a></li>
+	<ul class="first">
+		<li><span class="on">마이페이지</span></li>
+		<li><span>게시판 관리</span></li>
+		<li><span>신고 관리</span></li>
+		<li><span>회원 관리</span></li>
+	</ul>
+	
+	<ul class="second">
+		<li class="menu">
+			<ul class="on">
+				<li class="on"> 
+					<input type="button" id="output" value="결과가져오기">
+				<a href="infoupdate">정보수정</a></li>
+				<li>마이 글</li>
+				<li>마이 알림</li>
+				<li>마이 쪽지</li>
+			</ul>
+		</li>
+		<li class="menu">
+			<ul>
+				<li>공지게시판</li>
+				<li>고민게시판</li>
+				<li>정보공유게시판</li>
+				<li>지식인게시판</li>
+				<li>홈페이지문의게시판</li>
+			</ul>
+		</li>
+		<li class="menu"><ul>신고 관리</ul></li>
+		<li class="menu"><ul>회원 관리</ul></li>
+	</ul>
+	
+	
+	<ul class="third">
+		<li class="menu">
+			<ul class="on">
+				<jsp:include page="infoupdate.jsp"></jsp:include>
+			</ul>
+		</li>
+		<li class="menu"><ul></ul></li>
+		<li class="menu"><ul></ul></li>
+		<li class="menu"><ul></ul></li>
 	</ul>
 </nav>
-<section>
-	<div id="test" class="show">마이페이지</div>
-	<div id="test">게시판 관리</div>
-	<div id="test">신고 관리</div>
-	<div id="test">회원 관리</div>
-</section>
 </body>
 </html>
