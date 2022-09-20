@@ -72,7 +72,16 @@
     <version>2.2.2</version>
 </dependency>
 
-<!-- 타일즈 종료 -->																			
+<!-- 타일즈 종료 -->
+
+<!-- 이미지 업로드 설정 -->
+<dependency>
+	<groupId>commons-fileupload</groupId>
+	<artifactId>commons-fileupload</artifactId>
+	<version>1.3.1</version>
+</dependency>
+
+																			
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>

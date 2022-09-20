@@ -3,15 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
-<style type="text/css">
-	h1 {
-	clear: both;
-}
-</style>
 </head>
 <body>
-<h1>화이팅!!</h1>
+게시판 페이지
+
+test
 </body>
 </html>

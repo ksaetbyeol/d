@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.block_00{
+    background-color: black;
+    width: 300px;
+    height: max-content;
+  /*  background-image: ;*/
+}
+
+.logincss{
+    width: 700px;
+    height: 1300px;
+}
+
+.logincss li{
+  width: 100px;  
+  list-style: none;
+}
