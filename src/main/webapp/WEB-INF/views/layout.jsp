@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
 <title> <tiles:insertAttribute name="title" />  </title>
 </head>
