@@ -1,6 +1,7 @@
 package com.updev.member;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -15,9 +16,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.updev.board.Board;
 import com.updev.board.ServiceBoard;
 
 /**
@@ -106,10 +110,35 @@ public class MemberController {
 	      return "redirect:index";
 	   }
 	   
-	   //회원 마이페이지로 이동
-	   @RequestMapping(value = "/myp")
-	   public String ko8()
+	   //프로필 수정 체크
+	   @RequestMapping(value = "/proupdatecheck")
+	   public String ko8(HttpServletRequest request,Model mo)
 	   {
-		  return "mypage"; 
+		   
+		   String m_nick = request.getParameter("m_nick");
+		   	ServiceMember ss = sqlsession.getMapper(ServiceMember.class);
+			Signup dao = ss.profileupdatecheck(m_nick);
+			mo.addAttribute("list",dao);
+		   return "infoupdate";
 	   }
+	   
+	  //프로필 수정
+	   @RequestMapping(value = "/proupdate")
+	   public String ko9(HttpServletRequest request,MultipartHttpServletRequest mul)
+	   {
+		   String m_nick = mul.getParameter("m_nick");
+		   MultipartFile a = mul.getFile("m_profile");
+		   String m_profile = a.getOriginalFilename();
+		   String m_id = mul.getParameter("m_id");
+		   String m_pw = mul.getParameter("m_pw");
+		   String m_name = mul.getParameter("m_name");
+		   String m_mail = mul.getParameter("m_mail");
+		   String m_tel = mul.getParameter("m_tel");
+		   String m_field = mul.getParameter("m_field");
+		   	ServiceMember ss = sqlsession.getMapper(ServiceMember.class);
+		   	ss.profileupdate(m_nick,m_profile,m_id,m_pw,m_name,m_mail,m_tel,m_field);
+		   return "redirect:logout";
+	   }
+	   
+	   
 }
