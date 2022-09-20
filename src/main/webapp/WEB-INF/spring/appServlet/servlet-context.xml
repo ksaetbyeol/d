@@ -21,6 +21,11 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean> -->
 	
+	<!-- 이미지 업로드 설정 -->
+   <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+   <beans:property name="maxUploadSize" value="100000000"></beans:property>
+</beans:bean>
+	
 	<!-- 타일즈 설정 -->
 	   <beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
       <beans:property name="definitions">
@@ -54,7 +59,7 @@
    </beans:bean>
    <!-- 마이바티스 설정 종료 -->
 	
-	<context:component-scan base-package="com.updev.member,com.updev.board" />
+	<context:component-scan base-package="com.updev.member,com.updev.board,com.updev.admin" />
 	
 	
 	

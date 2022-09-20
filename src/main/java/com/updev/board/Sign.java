@@ -1,11 +1,11 @@
-package com.updev.member;
+package com.updev.board;
 
-public class Signup {
+public class Sign {
 
 	int m_num;
-	String m_profile,m_id,m_pw,m_nick,m_name,m_mail,m_tel,m_field,m_grade;
-	public Signup() {}
-	public Signup(int m_num, String m_profile, String m_id, String m_pw, String m_nick, String m_name, String m_mail,
+	String m_profile,m_id,m_pw,m_nick,m_name,m_mail,m_tel,m_field,m_jdate,m_grade;
+	public Sign() {}
+	public Sign(int m_num, String m_profile, String m_id, String m_pw, String m_nick, String m_name, String m_mail,
 			String m_tel, String m_field, String m_grade) {
 		super();
 		this.m_num = m_num;
@@ -17,6 +17,7 @@ public class Signup {
 		this.m_mail = m_mail;
 		this.m_tel = m_tel;
 		this.m_field = m_field;
+		this.m_jdate = m_jdate;
 		this.m_grade = m_grade;
 	}
 	public int getM_num() {
@@ -72,6 +73,12 @@ public class Signup {
 	}
 	public void setM_field(String m_field) {
 		this.m_field = m_field;
+	}
+	public String getM_jdate() {
+		return m_jdate;
+	}
+	public void setM_jdate(String m_jdate) {
+		this.m_jdate = m_jdate;
 	}
 	public String getM_grade() {
 		return m_grade;

@@ -16,10 +16,29 @@
    <definition name="signup" extends="baseLayout">   
       <put-attribute name="body" value="/WEB-INF/views/notmember/signup.jsp" />
    </definition>
+
    <!-- 
    <definition name="login" extends="baseLayout">   
       <put-attribute name="body" value="/WEB-INF/views/notmember/login.jsp" />
    </definition>
     -->
-   
-    </tiles-definitions>
+
+
+   <definition name="boardwrite" extends="baseLayout">   
+      <put-attribute name="body" value="/WEB-INF/views/member/boardwrite.jsp" />
+   </definition>
+  
+   <definition name="mypage" extends="baseLayout">   
+      <put-attribute name="body" value="/WEB-INF/views/member/mypage.jsp" />
+      </definition>
+      
+    <!-- admin -->
+	<definition name="admin" extends="baseLayout">   
+		<put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
+	</definition>
+	
+	<definition name="infoupdate" extends="baseLayout">   
+		<put-attribute name="body" value="/WEB-INF/views/admin/infoupdate.jsp" />
+	</definition>
+
+</tiles-definitions>
